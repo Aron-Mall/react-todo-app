@@ -3,7 +3,7 @@
 ## Screenshot
 ![preview](./preview.png)
 
-## Preview url: [https://](https://)
+## Preview url: [https://aron-react-todo-app.netlify.app/](https://aron-react-todo-app.netlify.app/)
 
 ## Currently learning react and wanted to build a mini project to solidify my knowledege on the below topics 
 
