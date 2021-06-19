@@ -46,9 +46,12 @@
 .form-todo i {
   font-size: 2rem;
   color: var(--primary-1);
+  transition: all 0.5s ease 0s;
  
 }
 
 .form-todo i:hover {
   color: var(--primary-2);
+  transform: scale(1.1);
+  cursor: pointer;
 }

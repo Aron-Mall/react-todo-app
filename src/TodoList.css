@@ -8,6 +8,7 @@
 .todo-list li {
   font-size: 1.5rem;
   color: var(--primary-1);
+  transition: all 0.5s ease 0s;
 }
 
 .todo-list .todo {
@@ -17,6 +18,7 @@
 
 .todo i {
   font-size: 1.5rem;
+  transition: all 0.3s ease 0s;
 }
 
 .todo i:hover {
@@ -26,8 +28,10 @@
 
 }
 
-.todo:hover li{
+.todo:hover li
+{
  color: var(--primary-2);
+ transform: scale(1.1);
 }
 
 
