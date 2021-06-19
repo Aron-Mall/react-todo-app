@@ -1,0 +1,33 @@
+.todo-list{
+  list-style-type: none;
+  margin-left: 1rem;
+  padding: 1rem;
+
+}
+
+.todo-list li {
+  font-size: 1.5rem;
+  color: var(--primary-1);
+}
+
+.todo-list .todo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo i {
+  font-size: 1.5rem;
+}
+
+.todo i:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  color: brown;
+
+}
+
+.todo:hover li{
+ color: var(--primary-2);
+}
+
+
