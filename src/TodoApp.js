@@ -1,4 +1,4 @@
-import {useState} from "react"
+import {useState, useEffect} from "react"
 import './TodoApp.css';
 import AddTodoForm from './AddTodoForm.js'
 import TodoList from './TodoList.js'
@@ -6,7 +6,11 @@ import TodoList from './TodoList.js'
 function TodoApp() {
   const [todos, setTodos] = useState([])
   const [todo, setTodo] = useState("");
-  const [validationMsg, setValidationMsg] = useState("")
+  const [validationMsg, setValidationMsg] = useState("");
+
+  useEffect(() => {
+    document.title = `${todos.length} todos`
+  },[todos])
 
 
   function handleTodoChange(event) {

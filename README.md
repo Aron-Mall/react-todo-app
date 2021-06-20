@@ -15,6 +15,10 @@
 - Forms
 - Lifting state up
 
+### Continued development
+
+- useEffect Hook - 20/06/2021 - adding the amount of todos in the title of the bowser tab. 
+
 
 
 
