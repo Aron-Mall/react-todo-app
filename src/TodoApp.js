@@ -4,14 +4,27 @@ import AddTodoForm from './AddTodoForm.js'
 import TodoList from './TodoList.js'
 
 function TodoApp() {
-  const [todos, setTodos] = useState([])
+  const [todos, setTodos] = useState(getTodosFromLocalStorage)
   const [todo, setTodo] = useState("");
   const [validationMsg, setValidationMsg] = useState("");
 
   useEffect(() => {
     document.title = `${todos.length} todos`
+  },[todos]);
+
+  useEffect(() => {
+    window.localStorage.setItem("todos_array", JSON.stringify(todos))
   },[todos])
 
+  function getTodosFromLocalStorage() {
+    const storedTodos = window.localStorage.getItem("todos_array");
+
+    if(storedTodos) {
+      return JSON.parse(storedTodos);
+    } else {
+      return [];
+    }
+  }
 
   function handleTodoChange(event) {
     setTodo(event.target.value);
