@@ -4,7 +4,6 @@ import AddTodoForm from './AddTodoForm.js'
 import TodoList from './TodoList.js'
 import Map from "./Map"
 import mapboxgl from "mapbox-gl";
-import 'mapbox-gl/dist/mapbox-gl.css';
 
 function TodoApp() {
   const [todos, setTodos] = useState(getTodosFromLocalStorage)
