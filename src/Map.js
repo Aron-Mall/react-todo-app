@@ -1,7 +1,11 @@
-import './map.css'
+import './map.css';
+
+
 
 function Map(props) {
-  const {todos, onLocationChange} = props;
+  const {todos, onLocationChange, mapRef} = props;
+
+
   return (<>
     <div id="map-menu">
       <p>Please Select:</p>
@@ -11,7 +15,7 @@ function Map(props) {
           ))}
       </select>
     </div>
-    <div id="map"></div>
+    <div ref={mapRef} className="map"></div>
   </>)
 }
 

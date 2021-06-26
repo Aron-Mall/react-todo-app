@@ -1,4 +1,4 @@
-import { useState, useEffect, useLayoutEffect } from "react"
+import { useState, useEffect, useLayoutEffect, useRef } from "react"
 import './TodoApp.css';
 import AddTodoForm from './AddTodoForm.js'
 import TodoList from './TodoList.js'
@@ -13,13 +13,15 @@ function TodoApp() {
   const [latitude, setLatitude] = useState("");
   const [validationMsg, setValidationMsg] = useState("");
   const [marker, setMarker] = useState();
+  const mapRef = useRef(null)
+
 
   useLayoutEffect(() => {
 
     mapboxgl.accessToken = process.env.REACT_APP_AT;
 
     const map = new mapboxgl.Map({
-      container: "map",
+      container: mapRef.current,
       style: 'mapbox://styles/mapbox/dark-v10',
       center: [-0.127758, 51.507351],
       zoom: 9
@@ -110,7 +112,8 @@ function TodoApp() {
       </div>
       <div className="map-container">
         <Map todos={todos}
-          onLocationChange={handleLocationChange} />
+             mapRef={mapRef}
+            onLocationChange={handleLocationChange} />
       </div>
     </div>
   </>
