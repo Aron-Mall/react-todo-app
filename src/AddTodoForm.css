@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 1rem;
+  position: relative;
 }
 
 .form-todo input[type="text"] {
@@ -47,18 +48,17 @@
 .form-todo i {
   font-size: 2rem;
   color: var(--primary-1);
-  transition: all 0.5s ease 0s;
- 
+  transition: all 0.3s ease 0s;
 }
 
 .form-todo i:hover {
   color: var(--primary-2);
-  transform: scale(1.1);
   cursor: pointer;
+  transform: scaleX(1.1);
 }
 
 #todo-submit{
-  text-align: right;
-  display: block;
-  width: 90%;
+  position: absolute;
+  top: 5px;
+  right: 10px;
 }
