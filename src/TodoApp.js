@@ -19,7 +19,7 @@ function TodoApp() {
 
     const map = new mapboxgl.Map({
       container: "map",
-      style: 'mapbox://styles/mapbox/dark-v10',
+      style: 'mapbox://styles/mapbox/streets-v11',
       center: [-0.127758, 51.507351],
       zoom: 9
     })
