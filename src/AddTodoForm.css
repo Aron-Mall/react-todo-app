@@ -7,7 +7,7 @@
 
 .form-todo input[type="text"] {
   flex: 1;
-  margin: 10px 5px;
+  margin: -2px 5px 10px 5px;
   padding: 1rem 0 10px 0;
   font-size: 1rem;
   border: none;
@@ -39,6 +39,7 @@
 
 .form-group-add{
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   width: 100%;
 }
@@ -54,4 +55,10 @@
   color: var(--primary-2);
   transform: scale(1.1);
   cursor: pointer;
+}
+
+#todo-submit{
+  text-align: right;
+  display: block;
+  width: 90%;
 }

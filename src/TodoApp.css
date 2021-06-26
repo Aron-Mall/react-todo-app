@@ -1,5 +1,11 @@
-.container {
-  min-width: 400px;
+.main-container {
+  width: 90vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.todo-container {
+  width: 400px;
   min-height: 80vh;
   border: 1px solid var(--primary-1);
   border-radius: 5px;
