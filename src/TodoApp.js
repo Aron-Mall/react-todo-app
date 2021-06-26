@@ -3,7 +3,7 @@ import './TodoApp.css';
 import AddTodoForm from './AddTodoForm.js'
 import TodoList from './TodoList.js'
 import Map from "./Map"
-import mapboxgl from 'mapbox-gl/dist/mapbox-gl-csp';
+import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
 function TodoApp() {
@@ -20,7 +20,7 @@ function TodoApp() {
 
     const map = new mapboxgl.Map({
       container: "map",
-      style: 'mapbox://styles/mapbox/streets-v11',
+      style: 'mapbox://styles/mapbox/dark-v10',
       center: [-0.127758, 51.507351],
       zoom: 9
     })
